@@ -2,6 +2,7 @@ html, body {
   margin: 0;
   padding: 0;
   font-family: 'Monaco';
+  color: white;
   background-image: url('backgroundImage.jpg');
 }
 canvas {
@@ -17,7 +18,7 @@ canvas {
   color : rgb(238, 238, 238);
   background-color: rgba(0,0,0,0.3);
   font-family: 'Courier';
-  border: outset white 2px';
+  border: outset white 2px;
 }
 
 .input{
