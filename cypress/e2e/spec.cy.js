@@ -6,7 +6,7 @@ describe('empty spec', () => {
   it('should display feedback when the user has no moles', () => {
     cy.get('.input').type('0')
       .then(() => {
-        cy.get('.play-button').click();
+        cy.get('#calculate-moles').click();
       }).then(() => {
         cy.get('#user-message').should('have.text', 'You sure aren\'t looking too bready.');
       });
@@ -15,7 +15,7 @@ describe('empty spec', () => {
   it('should display feedback then the user enters an invalid input', () => {
     cy.get('.input').type('mole')
       .then(() => {
-        cy.get('.play-button').click();
+        cy.get('#calculate-moles').click();
       }).then(() => {
         cy.get('#user-message').should('have.text', 'Please give Mx. Placenta a non-negative whole number quantity of moles. You do not have to partake in toenail ingestion as a result of this infraction.');
       });

@@ -38,6 +38,7 @@ function setup() {
   const displayMoleArrangements = createButton('Receive a tip regarding your moles!');
   displayMoleArrangements.position(moleInput.x, moleInput.y + 50);
   displayMoleArrangements.style('background-color', 'rgba(0,0,0,0.3)');
+  displayMoleArrangements.id('calculate-moles');
 
   displayMoleArrangements.mousePressed(() => {
     const moleInt = parseInt(moleInput.value(), 10);
