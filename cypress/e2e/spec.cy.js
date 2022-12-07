@@ -4,7 +4,7 @@ describe('empty spec', () => {
   });
 
   it('should display feedback when the user has no moles', () => {
-    cy.get('.input').type(0)
+    cy.get('.input').type('0')
       .then(() => {
         cy.get('.play-button').click();
       }).then(() => {
@@ -22,7 +22,7 @@ describe('empty spec', () => {
   });
 
   it('should display the correct number of moles', () => {
-    cy.get('.input').type(3)
+    cy.get('.input').type('3')
       .then(() => {
         cy.get('.play-button').click();
       }).then(() => {
