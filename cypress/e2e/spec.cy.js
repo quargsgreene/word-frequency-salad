@@ -21,7 +21,7 @@ describe('empty spec', () => {
       });
   });
 
-  it('should display the correct number of moles', () => {
+  it('should display the correct number of mole arrangements', () => {
     cy.get('.input').type('3')
       .then(() => {
         cy.get('.play-button').click();
