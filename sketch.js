@@ -33,6 +33,7 @@ function setup() {
 
   const userMessage = createP('');
   userMessage.position((3 * width) / 4, height / 2);
+  userMessage.id('user-message');
 
   const displayMoleArrangements = createButton('Receive a tip regarding your moles!');
   displayMoleArrangements.position(moleInput.x, moleInput.y + 50);
@@ -43,9 +44,7 @@ function setup() {
     if (isNaN(moleInt) || moleInt < 0) {
       const err = new Error('Please give Mx. Placenta a non-negative whole number quantity of moles. You do not have to partake in toenail ingestion as a result of this infraction.');
       userMessage.html(err);
-    }
-
-    if (moleInt === 0) {
+    } else if (moleInt === 0) {
       userMessage.html('You sure aren\'t looking too bready.');
     } else {
       userMessage.html(`You can have your moles removed and arrange them in a circle in ${factorial(moleInt - 1)} ways! However, you may sustain injuries in doing so. Always check with a dermatologist in the event that your moles cause you distress.`);
